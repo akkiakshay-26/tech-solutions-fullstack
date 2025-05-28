@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercise Editor</title>
-  <link rel="stylesheet" href="styles/compilerstyle.css">
-</head>
-<body>
-  <div class="editor-container">
-    <div class="exercise-info">
-      <h1 id="exercise-title"></h1>
-      <p id="exercise-description"></p>
-    </div>
-    
-    <div class="editor-area">
-      <div class="code-editor">
-        <textarea id="html-editor" spellcheck="false"></textarea>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Editor</title>
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="styles/compilerstyle.css" />
+  </head>
+  <body>
+    <div class="editor-container">
+      <div class="exercise-info">
+        <h1 id="exercise-title"></h1>
+        <p id="exercise-description"></p>
       </div>
-      <div class="preview">
-        <iframe id="preview-frame"></iframe>
+      <div class="controls">
+        <button id="run-btn">Run Code</button>
+        <button id="submit-btn">Submit Solution</button>
+        <button id="back-btn">Back to Dashboard</button>
       </div>
-    </div>
-    
-    <div class="controls">
+      <div class="editor-area">
+        <div class="code-editor">
+          <textarea id="html-editor" spellcheck="false"></textarea>
+        </div>
+        <div class="preview">
+          <iframe id="preview-frame"></iframe>
+        </div>
+      </div>
+
+      <!-- <div class="controls">
       <button id="run-btn">Run Code</button>
       <button id="submit-btn">Submit Solution</button>
       <button id="back-btn">Back to Dashboard</button>
+    </div> -->
     </div>
-  </div>
 
-  <script src="scripts/compiler.js"></script>
-</body>
+    <script src="scripts/compiler.js"></script>
+  </body>
 </html>

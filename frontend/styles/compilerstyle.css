@@ -1,24 +1,42 @@
+body{
+  box-sizing: border-box;
+  font-family: "Iner", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .editor-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
   padding: 20px;
+  background-color: #070054;
+}
+
+#exercise-title{ 
+  color: #dedede;
 }
 
 .exercise-info {
   margin-bottom: 20px;
+  color: #dedede;
 }
 
 .editor-area {
   display: flex;
   flex: 1;
   gap: 20px;
+
 }
 
 .code-editor, .preview {
   flex: 1;
   border: 1px solid #ccc;
+  background-color: #dedede;
   border-radius: 5px;
+  padding: 10px;
   overflow: hidden;
 }
 
@@ -27,10 +45,12 @@
   height: 100%;
   padding: 10px;
   font-family: monospace;
+  background-color: transparent;
   font-size: 16px;
   resize: none;
   border: none;
   outline: none;
+  text-wrap: wrap;
 }
 
 #preview-frame {
@@ -43,17 +63,27 @@
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .controls button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #070054;
-  color: white;
+  background-color: #dedede;
+  color: #070054;
   cursor: pointer;
+  transition: all 0.25s ease;
 }
 
 .controls button:hover {
   background-color: #0a00a0;
+  color: #dedede;
+}
+/* responsivensess */
+@media (max-width:768px){
+  .editor-area{
+    display: flex;
+    flex-direction: column;
+  }
 }

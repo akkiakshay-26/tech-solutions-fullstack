@@ -15,14 +15,17 @@
         <img src="assets/logo.png" alt="TechLearn Solutions Logo" />
       </div>
       <nav class="menu-items">
-        <a href="#dashboard">Dashboard</a>
-        <a href="#progress">Progress</a>
-        <a href="#designlab">Profile</a>
+        <div class="dashboard-links">
+          <a href="#dashboard-top ">Dashboard</a>
+          <a href="#excercise">Excercise</a>
+          <a href="#designlab">Profile</a>
+        </div>
         <div class="log-out">
           <button id="logoutBtn">Log out</button>
         </div>
       </nav>
     </header>
+    <div class="spacing-div" id="dashboard-top"></div>
     <div class="dash-board" id="dashboard">
       <div class="user-profile-icon">
         <svg
@@ -42,23 +45,25 @@
       </div>
       <div class="user-desc">
         <h2>Welcome akkiakshay_02</h2>
-        <p><i>
-          Passionate frontend Developer learning modern web
-          technologies.Currently exploring React,CSS Grid and JavaScript
-        </i></p>
+        <p>
+          <i>
+            Passionate frontend Developer learning modern web
+            technologies.Currently exploring React,CSS Grid and JavaScript
+          </i>
+        </p>
       </div>
-      <div class="progress">
+      <div class="progress" id="excercise">
         <div class="progress-details">
           <h2>0</h2>
           <p>Completed</p>
         </div>
         <div class="progress-details">
           <h2>0</h2>
-          <p>Completed</p>
+          <p>In Progress</p>
         </div>
         <div class="progress-details">
           <h2>0</h2>
-          <p>Completed</p>
+          <p>Pending</p>
         </div>
       </div>
     </div>
@@ -392,15 +397,15 @@
     </div>
   </body>
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const token = localStorage.getItem('token');
-    const user = localStorage.getItem('user');
-    
-    if (!token || !user) {
-      window.location.href = "index.html";
-    } else {
-      console.log("User is authenticated:", JSON.parse(user));
-    }
-  });
-</script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const token = localStorage.getItem("token");
+      const user = localStorage.getItem("user");
+
+      if (!token || !user) {
+        window.location.href = "index.html";
+      } else {
+        console.log("User is authenticated:", JSON.parse(user));
+      }
+    });
+  </script>
 </html>
