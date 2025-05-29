@@ -17,7 +17,6 @@ header {
   justify-content: space-between;
   padding: 25px 50px;
   align-items: center;
-  /* position: fixed; */
   width: 100%;
 }
 
@@ -27,22 +26,21 @@ header {
    gap: 30px;
    align-items: center;
 }
-.logo{
+/* .logo{
   padding: 2px;
-}
+} */
 .logo img {
   height: 50px;
   width: 50px;
   padding: 5px;
   object-fit: contain;
   background-color: #dedede;
-
   border-radius: 50%;
 }
 .menu-items {
   display: flex;
   justify-content: space-evenly;
-  gap: 50px;
+  gap: 30px;
   font-weight: 700;
 }
 
@@ -289,15 +287,27 @@ header {
   header {
     flex-direction: column;
     align-items: flex-start;
-    min-height: 30vh;
-    position: static;
+    min-height: 15vh;
+    position: fixed;
+    justify-content: space-between;
     padding: 20px;
+    align-items: center;
   }
   .menu-items {
     padding-top: 15px;
     flex-direction: column;
     gap: 15px;
   }
+  .dashboard-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 10px; */
+  }
+.log-out{
+  display:flex;
+  justify-content: center;
+}
   .skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
