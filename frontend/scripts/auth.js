@@ -14,7 +14,7 @@ loginBtn.addEventListener("click", () => {
   document.querySelector(".toggle-right").style.display = "none";
 });
 
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://tech-solutions-fullstack.onrender.com/api";
 
 // Register user
 registerForm.addEventListener("submit", async (e) => {

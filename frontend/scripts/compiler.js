@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     // Fetch exercise details
-    const response = await fetch(`http://localhost:5000/api/exercises/${exerciseId}`);
+    const response = await fetch(`https://tech-solutions-fullstack.onrender.com/api/exercises/${exerciseId}`);
     const exercise = await response.json();
 
     // Fetch user progress for this exercise
-    const progressResponse = await fetch(`http://localhost:5000/api/progress/${exerciseId}`, {
+    const progressResponse = await fetch(`https://tech-solutions-fullstack.onrender.com/api/progress/${exerciseId}`, {
       headers: {
         'x-auth-token': token
       }
@@ -63,7 +63,7 @@ function runCode() {
 async function submitSolution(exerciseId, code) {
   try {
     const token = localStorage.getItem('token');
-    const response = await fetch(`http://localhost:5000/api/progress/${exerciseId}`, {
+    const response = await fetch(`https://tech-solutions-fullstack.onrender.com/api/progress/${exerciseId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
