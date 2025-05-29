@@ -7,10 +7,10 @@ const { JWT_SECRET } = process.env;
 // Register
 router.post('/register', async (req, res) => {
   try {
-    console.log('Registration attempt:', req.body);
+    // console.log('Registration attempt:', req.body);
     const user = new User(req.body);
     await user.save();
-    console.log('User created:', user);
+    // console.log('User created:', user);
     const { username, email, password } = req.body;
     if (user) return res.status(400).json({ msg: 'User already exists' });
 
@@ -20,7 +20,7 @@ router.post('/register', async (req, res) => {
     const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '7d' });
     res.json({ token, user: { id: user._id, username, email } });
   } catch (err) {
-     console.error('Registration error:', err);
+    //  console.error('Registration error:', err);
     res.status(400).json({ message: err.message });
   }
 });

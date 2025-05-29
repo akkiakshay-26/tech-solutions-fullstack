@@ -7,9 +7,9 @@ const connectDB = async () => {
       useUnifiedTopology: true,
     });
     
-    console.log(`MongoDB connected: ${conn.connection.host}`);
+    // console.log(`MongoDB connected: ${conn.connection.host}`);
     const usersCount = await mongoose.connection.db.collection('users').countDocuments();
-    console.log(`Users in database: ${usersCount}`);
+    // console.log(`Users in database: ${usersCount}`);
 
   } catch (err) {
     console.error( 'MongoDB connection error:', err.message);
